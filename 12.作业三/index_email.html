@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" name="" id="email">
+    <input type="button" value="邮箱验证" id="btn1">
+
+</body>
+
+<script>
+
+    // 邮箱验证
+    document.getElementById('btn1').onclick = function(){
+        var e = document.getElementById('email').value;
+        var reg = /\w+@[0-9a-z]+(\.[0-9a-z]{2,6})$/;
+        if(reg.test(e)){
+            document.getElementById('btn1').value = '邮箱验证通过';
+        }else{
+            document.getElementById('btn1').value = '邮箱验证失败';
+        }
+    }
+
+</script>
+
+
+</html>
